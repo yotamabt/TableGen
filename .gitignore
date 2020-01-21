@@ -4,3 +4,4 @@ Include/
 Lib/
 Scripts/
 pyvenv.cfg
+*.html
