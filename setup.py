@@ -5,7 +5,7 @@ with open("README.md", "r",encoding= "utf-8-sig") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="TableGen-yotamabt",
+    name="tablegen-yotamabt",
     version="1.0.0",
     author="Yotam Abt",
     author_email="yotamabt@gmail.com",
