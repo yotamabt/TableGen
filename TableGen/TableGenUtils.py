@@ -6,6 +6,7 @@ import os
 import time
 import csv
 from subprocess import Popen
+import TableGen.TempFileListener
 
 DeafultHTMLStyle ="<style>\n table.gen-table {\n font-family: Tahoma, Geneva, sans-serif;\n border: 1px solid #1C6EA4;\n background-color: #EEEEEE;\n width: 100%;\n text-align: left;\n border-collapse: collapse;\n }\n table.gen-table td, table.gen-table th {\n border: 1px solid #AAAAAA;\n padding: 3px 2px;\n }\n table.gen-table tbody td {\n font-size: 13px;\n }\n table.gen-table tr:nth-child(even) {\n background: #F88888;\n }\n table.gen-table thead {\n background: #900C3F ;\n border-bottom: 2px solid #444444;\n }\n table.gen-table thead th {\n font-size: 15px;\n font-weight: bold;\n color: #FFFFFF;\n border-left: 2px solid #D0E4F5;\n }\n table.gen-table thead th:first-child {\n border-left: none;\n }\n table.gen-table tfoot td {\n font-size: 14px;\n }\n table.gen-table tfoot .links {\n text-align: right;\n }\n table.gen-table tfoot .links a{\n display: inline-block;\n background: #1C6EA4;\n color: #FFFFFF;\n padding: 2px 8px;\n border-radius: 5px;\n }\n </style>\n"
 
@@ -33,7 +34,7 @@ def viewHTML(htmlstring):
     #open the browser
    webbrowser.open(url)
     #remove the file - listen with a subprocess when the browser is done with loading
-   Popen([sys.executable,"./TempFileListener.py",url])
+   Popen([sys.executable,os.path.abspath(TableGen.TempFileListener.__file__),url],shell= True)
 
 
 

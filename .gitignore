@@ -6,3 +6,8 @@ Scripts/
 pyvenv.cfg
 *.html
 Tests.py
+*.json
+dist/
+tablegen.egg-info/
+tablegen_yotamabt.egg-info/
+build/

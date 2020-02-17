@@ -10,6 +10,8 @@ def removetemp(url):
     except PermissionError:
         removetemp(url)
 
-
-time.sleep(0.5)
-removetemp(sys.argv[1])
+try:
+    time.sleep(0.5)
+    removetemp(sys.argv[1])
+except IndexError:
+    pass

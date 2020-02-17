@@ -1,4 +1,2 @@
-from TableGen.TableGenUtils import Table as TableUtilsClass
+from TableGen.TableGenUtils import Table 
 
-class Table(TableUtilsClass):
-    pass
