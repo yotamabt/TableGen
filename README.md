@@ -3,6 +3,10 @@
 
 ### Quickly convert a list of dictionaries to human readable tables
 
+## Install
+```
+pip install tablegen
+```
 
 ## Create Table Object
 
